@@ -202,6 +202,10 @@ header {
     background-image: url(../img/header-controle.jpg);
 }
 
+.header-ormob {
+    background-image: url(../img/header-ormob.jpg);
+}
+
 header .header-content {
     position: relative;
     width: 100%;
