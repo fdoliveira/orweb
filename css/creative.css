@@ -541,4 +541,11 @@ body {
         display: block;
     }
 
+    .name {
+        text-shadow: 2px 2px 15px #000;
+    }
+    .portfolio-box .portfolio-box-caption {
+        opacity: 1;
+        background: rgba(14, 137, 25, 0);
+    }
 }
