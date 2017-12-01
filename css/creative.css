@@ -195,15 +195,19 @@ header {
 }
 
 .header-home {
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/or/header/header.jpg);
 }
 
 .header-controle {
-    background-image: url(../img/header-controle.jpg);
+    background-image: url(../img/or-controle/header/header-controle.jpg);
 }
 
 .header-ormob {
-    background-image: url(../img/header-ormob.jpg);
+    background-image: url(../img/or-mob/header/header-ormob.jpg);
+}
+
+.header-orerp {
+    background-image: url(../img/or-erp/header/header-orerp.jpg);
 }
 
 header .header-content {
