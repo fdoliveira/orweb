@@ -259,7 +259,9 @@ header .header-content .header-content-inner p {
     color: white;
 }
 
-
+.text-black {
+    color: #333;
+}
 
 @media(min-width:768px) {
 
