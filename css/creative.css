@@ -210,6 +210,9 @@ header {
     background-image: url(../img/or-erp/header/header-orerp.jpg);
 }
 
+.header-oromie {
+    background-image: url(../img/or-omie/header/header-oromie.jpg);
+}
 header .header-content {
     position: relative;
     width: 100%;
