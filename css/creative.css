@@ -283,9 +283,8 @@ header .header-content .header-content-inner p {
 .text-black {
     color: #333;
 }
-
-.chat .credits {
-    display: none;
+a .credits {
+    display: none !important;
 }
 
 
