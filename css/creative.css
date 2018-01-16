@@ -283,11 +283,6 @@ header .header-content .header-content-inner p {
 .text-black {
     color: #333;
 }
-.credits {
-    display: none !important;
-    opacity: 0;
-}
-
 
 @media(min-width:768px) {
 
