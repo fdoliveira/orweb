@@ -285,6 +285,7 @@ header .header-content .header-content-inner p {
 }
 a.credits {
     display: none !important;
+    opacity: 0;
 }
 
 
