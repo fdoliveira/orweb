@@ -283,7 +283,7 @@ header .header-content .header-content-inner p {
 .text-black {
     color: #333;
 }
-a .credits {
+a.credits {
     display: none !important;
 }
 
