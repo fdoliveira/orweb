@@ -283,6 +283,12 @@ header .header-content .header-content-inner p {
 .text-black {
     color: #333;
 }
+
+.chat .credits {
+    display: none;
+}
+
+
 @media(min-width:768px) {
 
     .affix-top .img1 {
