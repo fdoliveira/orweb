@@ -226,6 +226,9 @@ header {
 .header-ormob {
     background-image: url(../img/or-mob/header/header-ormob.jpg);
 }
+.header-ormob a {
+    margin: 1rem;
+}
 
 .header-orerp {
     background-image: url(../img/or-erp/header/header-orerp.jpg);
@@ -282,6 +285,13 @@ header .header-content .header-content-inner p {
 
 .text-black {
     color: #333;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 @media(min-width:768px) {
