@@ -1,0 +1,37 @@
+body {
+	font-family: 'Poppins';
+}
+
+/* === Min and Max | Height and Width === */
+.h-100-vh {
+	height: 100vh;
+}
+.min-h-100 {
+  min-height: 100%;
+}
+.min-h-100-vh {
+  min-height: 100vh;
+}
+.max-h-100 {
+  max-height: 100%;
+}
+.max-h-100-vh {
+  max-height: 100vh;
+}
+.min-w-100 {
+  min-width: 100%;
+}
+.min-w-100-vh {
+  min-width: 100vh;
+}
+.max-w-100 {
+  max-width: 100%;
+}
+.max-w-100-vh {
+  max-width: 100vh;
+}
+
+
+
+
+
