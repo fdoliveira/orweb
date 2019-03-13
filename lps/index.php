@@ -51,7 +51,7 @@
 
 		<p>Leite de capivaris, leite de mula manquis sem cabeça. Manduma pindureta quium dia nois paga.</p>
 
-		<a href="#models" class="btn btn-danger">Modelos</a>
+		<a href="#products" class="btn btn-danger">Produtos</a>
 	</div>
 </section>
 
@@ -80,7 +80,7 @@
 			<?php endforeach; ?>
 		</div>
 
-		<a href="#products" class="btn btn-danger">Produtos</a>
+		<a href="#models" class="btn btn-danger">Modelos</a>
 
 	</div>
 </section>
