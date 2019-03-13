@@ -16,10 +16,10 @@
 			        <a class="nav-link" href="#about">Sobre</a>
 			    </li>
 			    <li class="nav-item">
-			        <a class="nav-link" href="#models">Modelos</a>
+			        <a class="nav-link" href="#products">Produtos</a>
 			    </li>
 			    <li class="nav-item">
-			        <a class="nav-link" href="#products">Produtos</a>
+			        <a class="nav-link" href="#models">Modelos</a>
 			    </li>
 		    </ul>
 	    </div>
@@ -55,33 +55,6 @@
 	</div>
 </section>
 
-<section id="models" class="bg-danger py-5">
-	<div class="container">
-		<h2 class="text-white font-weight-bold mb-4">Modelos</h2>
-
-		<?php $models = getModels(); ?>
-		<?php foreach ($models as $key => $value) : ?>
-
-			<h4	class="text-light"><u><?= $value['name']; ?></u></h4>
-			<div class="row mb-3">
-				<?php foreach ($value['pdfs'] as $key => $pdf) : ?>
-					<div class="col-6 col-md-2">
-						<a target="_blank" href="<?= $pdf['link']; ?>">
-							<div class="position-relative">
-								<div class="mask-document position-absolute w-100 h-100"></div>
-								<img class="img-fluid" src="<?= $pdf['img']; ?>">
-							</div>
-						</a>
-						<h4 class="h6 text-white mt-2">Modelo <?= $key+1; ?></h4>
-					</div>
-				<?php endforeach; ?>
-			</div>
-		<?php endforeach; ?>
-
-		<a href="#products" class="btn btn-light">Produtos</a>
-	</div>
-</section>
-
 <section id="products" class="bg-light py-5">
 	<div class="container">
 		<h2 class="font-weight-bold">Produtos</h2>
@@ -98,7 +71,7 @@
 							<div class="card-body text-center text-md-left bg-white">
 								<h3 class="card-title"><?= $product['name']; ?></h3>
 								<p class="card-text"><?= $product['description']; ?></p>
-								<a href="<?= $product['link']; ?>" class="btn btn-danger">Ver Produto</a>
+								<a href="#<?= $product['id']; ?>" class="btn btn-danger">Ver Produto</a>
 							</div>
 						</div>
 					</div>
@@ -107,5 +80,34 @@
 		</div>
 	</div>
 </section>
+
+<section id="models" class="bg-danger py-5">
+	<div class="container">
+		<h2 class="text-white font-weight-bold mb-4">Modelos</h2>
+
+		<?php $models = getProducts(); ?>
+		<?php foreach ($models as $key => $model) : ?>
+
+			<h4	id="<?= $model['id']; ?>" class="text-light mt-5"><u><?= $model['name']; ?></u></h4>
+			<div class="row mb-3">
+				<?php foreach ($model['pdfs'] as $key => $pdf) : ?>
+					<div class="col-6 col-md-2">
+						<a target="_blank" href="<?= $pdf['link']; ?>">
+							<div class="position-relative">
+								<div class="mask-document position-absolute w-100 h-100"></div>
+								<img class="img-fluid" src="<?= $pdf['img']; ?>">
+							</div>
+						</a>
+						<h4 class="h6 text-white mt-2">Modelo <?= $model['name']; ?> <?= $key+1; ?></h4>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		<?php endforeach; ?>
+
+		<a href="#products" class="btn btn-light">Produtos</a>
+	</div>
+</section>
+
+
 
 <?php require ('footer.php'); ?>

@@ -32,13 +32,17 @@ function get_sheets($sheets, $page = 'default')
 
 }
 
-function getModels() 
+function getProducts() 
 {
 
 	$models = array(
 
 		array(
-			'name' => 'Loja Móvel', 
+			'id'          => 'lojamovel',
+			'name' 		  => 'Loja Móvel',
+			'icon'		  => 'card',
+			'description' => 'Sistema utilizado por vendedores externos, por lojas móveis ou de pequeno porte, em que o mesmo ator que realiza a venda é o mesmo que fatura, emiti a NF, e recebe o dinheiro.',
+			'page_link'        => '#', 
 			'pdfs' => array(
 				array(
 					'link' => 'pdf/loja-movel/loja-movel-1.pdf', 
@@ -52,7 +56,11 @@ function getModels()
 		),
 
 		array(
-			'name' => 'Loja Fácil', 
+			'id'          => 'lojafacil',
+			'name' 		  => 'Loja Fácil', 
+			'icon'		  => 'cash', 
+			'description' => 'Sistema utilizado em lojas de pequeno porte, onde o vendedor realiza a venda e um caixa fatura e recebe o pagamento.', 
+			'page_link'        => '#',
 			'pdfs' => array(
 				array(
 					'link' => 'pdf/loja-facil/loja-facil-1.pdf', 
@@ -70,7 +78,11 @@ function getModels()
 		),
 
 		array(
-			'name' => 'Venda Fácil', 
+			'id'          => 'vendafacil',
+			'name' 		  => 'Venda Fácil',
+			'icon'		  => 'basket',  
+			'description' => 'Sistema onde o vendedor apenas realiza a venda.',
+			'page_link'        => '#',
 			'pdfs' => array(
 				array(
 					'link' => 'pdf/venda-facil/venda-facil-1.pdf', 
@@ -84,7 +96,11 @@ function getModels()
 		),
 
 		array(
-			'name' => 'Caixa Fácil', 
+			'id'          => 'caixafacil',
+			'name' 		  => 'Caixa Fácil',
+			'icon'		  => 'cart', 
+			'description' => 'Sistema em que o cliente escolhe os produtos e passa os produtos no caixa. Não temos um vendedor, temos um Caixa que recebe os produtos que o cliente escolheu, fatura e recebe o pagamento.',
+			'page_link'        => '#',
 			'pdfs' => array(
 				array(
 					'link' => 'pdf/caixa-facil/caixa-facil-1.pdf', 
@@ -103,43 +119,5 @@ function getModels()
 
 }
 
-function getProducts()
-{
-
-	$products = array(
-
-		array(
-			'name'        => 'Loja Móvel', 
-			'icon'		  => 'card',
-			'description' => 'Sistema utilizado por vendedores externos, por lojas móveis ou de pequeno porte, em que o mesmo ator que realiza a venda é o mesmo que fatura, emiti a NF, e recebe o dinheiro.',
-			'link'        => '#'
-		),
-
-		array(
-			'name'        => 'Loja Fácil', 
-			'icon'		  => 'cash', 
-			'description' => 'Sistema utilizado em lojas de pequeno porte, onde o vendedor realiza a venda e um caixa fatura e recebe o pagamento.', 
-			'link'        => '#'
-		),
-
-		array(
-			'name'        => 'Venda Fácil', 
-			'icon'		  => 'basket',  
-			'description' => 'Sistema onde o vendedor apenas realiza a venda.',
-			'link'        => '#'
-		),
-
-		array(
-			'name'        => 'Caixa Fácil', 
-			'icon'		  => 'cart', 
-			'description' => 'Sistema em que o cliente escolhe os produtos e passa os produtos no caixa. Não temos um vendedor, temos um Caixa que recebe os produtos que o cliente escolheu, fatura e recebe o pagamento.',
-			'link'        => '#'
-		)
-
-	);
-
-	return $products;
-
-}
 
  ?>
