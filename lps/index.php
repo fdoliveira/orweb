@@ -71,13 +71,17 @@
 							<div class="card-body text-center text-md-left bg-white">
 								<h3 class="card-title"><?= $product['name']; ?></h3>
 								<p class="card-text"><?= $product['description']; ?></p>
-								<a href="#<?= $product['id']; ?>" class="btn btn-danger">Ver Produto</a>
+								<a href="<?= $product['page_link']; ?>" class="btn btn-danger">Ver Produto</a>
+								<a href="#<?= $product['id']; ?>" class="btn btn-secondary">Ver Modelo</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			<?php endforeach; ?>
 		</div>
+
+		<a href="#products" class="btn btn-danger">Produtos</a>
+
 	</div>
 </section>
 
@@ -104,7 +108,6 @@
 			</div>
 		<?php endforeach; ?>
 
-		<a href="#products" class="btn btn-light">Produtos</a>
 	</div>
 </section>
 
