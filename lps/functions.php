@@ -42,15 +42,19 @@ function getProducts()
 			'name' 		  => 'Loja Móvel',
 			'icon'		  => 'card',
 			'description' => 'Sistema utilizado por vendedores externos, por lojas móveis ou de pequeno porte, em que o mesmo ator que realiza a venda é o mesmo que fatura, emiti a NF, e recebe o dinheiro.',
-			'page_link'        => '#', 
-			'pdfs' => array(
+			'page_link'   => '#', 
+			'pdfs'        => array(
 				array(
-					'link' => 'pdf/loja-movel/loja-movel-1.pdf', 
-					'img' => 'pdf/loja-movel/loja-movel-1.jpg'
+					'user'      => 'Vendedor',
+					'plataform' => 'Mobile',
+					'link'      => 'pdf/loja-movel/loja-movel-1.pdf', 
+					'img'       => 'pdf/loja-movel/loja-movel-1.jpg'
 				),
 				array(
-					'link' => 'pdf/loja-movel/loja-movel-2.pdf', 
-					'img' => 'pdf/loja-movel/loja-movel-2.jpg'
+					'user'      => 'Gerente',
+					'plataform' => 'Web',
+					'link'      => 'pdf/loja-movel/loja-movel-2.pdf', 
+					'img'       => 'pdf/loja-movel/loja-movel-2.jpg'
 				)
 			)
 		),
@@ -60,19 +64,25 @@ function getProducts()
 			'name' 		  => 'Loja Fácil', 
 			'icon'		  => 'cash', 
 			'description' => 'Sistema utilizado em lojas de pequeno porte, onde o vendedor realiza a venda e um caixa fatura e recebe o pagamento.', 
-			'page_link'        => '#',
-			'pdfs' => array(
+			'page_link'   => '#',
+			'pdfs'        => array(
 				array(
-					'link' => 'pdf/loja-facil/loja-facil-1.pdf', 
-					'img' => 'pdf/loja-facil/loja-facil-1.jpg'
+					'user'      => 'Vendedor',
+					'plataform' => 'Mobile',
+					'link'      => 'pdf/loja-facil/loja-facil-1.pdf', 
+					'img'       => 'pdf/loja-facil/loja-facil-1.jpg'
 				),
 				array(
-					'link' => 'pdf/loja-facil/loja-facil-2.pdf', 
-					'img' => 'pdf/loja-facil/loja-facil-2.jpg'
+					'user'      => 'Caixa',
+					'plataform' => 'Desktop/Mobile',
+					'link'      => 'pdf/loja-facil/loja-facil-2.pdf', 
+					'img'       => 'pdf/loja-facil/loja-facil-2.jpg'
 				),
 				array(
-					'link' => 'pdf/loja-facil/loja-facil-3.pdf', 
-					'img' => 'pdf/loja-facil/loja-facil-3.jpg'
+					'user'      => 'Gerente',
+					'plataform' => 'Web',
+					'link'      => 'pdf/loja-facil/loja-facil-3.pdf', 
+					'img'       => 'pdf/loja-facil/loja-facil-3.jpg'
 				)
 			)
 		),
@@ -82,15 +92,19 @@ function getProducts()
 			'name' 		  => 'Venda Fácil',
 			'icon'		  => 'basket',  
 			'description' => 'Sistema onde o vendedor apenas realiza a venda.',
-			'page_link'        => '#',
-			'pdfs' => array(
+			'page_link'   => '#',
+			'pdfs'        => array(
 				array(
-					'link' => 'pdf/venda-facil/venda-facil-1.pdf', 
-					'img' => 'pdf/venda-facil/venda-facil-1.jpg'
+					'user'      => 'Vendedor',
+					'plataform' => 'Mobile',
+					'link'      => 'pdf/venda-facil/venda-facil-1.pdf', 
+					'img'       => 'pdf/venda-facil/venda-facil-1.jpg'
 				),
 				array(
-					'link' => 'pdf/venda-facil/venda-facil-2.pdf', 
-					'img' => 'pdf/venda-facil/venda-facil-2.jpg'
+					'user'      => 'Gerente',
+					'plataform' => 'Web',
+					'link'      => 'pdf/venda-facil/venda-facil-2.pdf', 
+					'img'       => 'pdf/venda-facil/venda-facil-2.jpg'
 				)
 			)
 		),
@@ -100,15 +114,19 @@ function getProducts()
 			'name' 		  => 'Caixa Fácil',
 			'icon'		  => 'cart', 
 			'description' => 'Sistema em que o cliente escolhe os produtos e passa os produtos no caixa. Não temos um vendedor, temos um Caixa que recebe os produtos que o cliente escolheu, fatura e recebe o pagamento.',
-			'page_link'        => '#',
-			'pdfs' => array(
+			'page_link'   => '#',
+			'pdfs'        => array(
 				array(
-					'link' => 'pdf/caixa-facil/caixa-facil-1.pdf', 
-					'img' => 'pdf/caixa-facil/caixa-facil-1.jpg'
+					'user'      => 'Caixa',
+					'plataform' => 'Desktop',
+					'link'      => 'pdf/caixa-facil/caixa-facil-1.pdf', 
+					'img'       => 'pdf/caixa-facil/caixa-facil-1.jpg'
 				),
 				array(
-					'link' => 'pdf/caixa-facil/caixa-facil-2.pdf', 
-					'img' => 'pdf/caixa-facil/caixa-facil-2.jpg'
+					'user'      => 'Gerente',
+					'plataform' => 'Web',
+					'link'      => 'pdf/caixa-facil/caixa-facil-2.pdf', 
+					'img'       => 'pdf/caixa-facil/caixa-facil-2.jpg'
 				)
 			)
 		)

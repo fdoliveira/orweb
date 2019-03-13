@@ -102,7 +102,7 @@
 								<img class="img-fluid" src="<?= $pdf['img']; ?>">
 							</div>
 						</a>
-						<h4 class="h6 text-white mt-2">Modelo <?= $model['name']; ?> <?= $key+1; ?></h4>
+						<h4 class="h6 text-white mt-2">Caso de Uso - <?= $pdf['user']; ?> - <?= $pdf['plataform']; ?></h4>
 					</div>
 				<?php endforeach; ?>
 			</div>
