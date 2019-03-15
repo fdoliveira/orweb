@@ -1,49 +1,125 @@
 <?php require ('functions.php'); ?>
 <?php require ('header.php'); ?>
 
-<div class="d-flex">
-	
-	<div class="sidenav position-fixed h-100-vh bg-light border-right py-5" style="width: 280px;">
-		<div id="accordion">
+<style type="text/css">
+body {
+	font-size: .875rem;
+}
 
-			<div class="">
-				<div class="p-3 border-bottom" id="headingOne">
-					<h5 class=" mb-0">
-						<a class="text-dark" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							<i class="h3 icon ion-md-heart"></i><span class="font-weight-bold"> Seção #1</span>
-						</a>
-					</h5>
-				</div>
+.feather {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-bottom;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100; /* Behind the navbar */
+	padding: 0;
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
 
-				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+.sidebar-sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 48px; /* Height of navbar */
+	height: calc(100vh - 48px);
+	padding-top: .5rem;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
 
-					<a class="w-100 d-block px-4 py-2 text-left border-bottom" href="#primary">Subitem</a>
-					<a class="w-100 d-block px-4 py-2 text-left border-bottom" href="#danger">Subitem</a>
-					<a class="w-100 d-block px-4 py-2 text-left border-bottom" href="#warning">Subitem</a>
+.sidebar .nav-link {
+	font-weight: 500;
+	color: #333;
+}
 
-				</div>
+.sidebar .nav-link .feather {
+	margin-right: 4px;
+	color: #999;
+}
+
+.sidebar .nav-link.active {
+	color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+	color: inherit;
+}
+
+.sidebar-heading {
+	font-size: .75rem;
+	text-transform: uppercase;
+}
+.navbar-brand {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	font-size: 1rem;
+	background-color: rgba(0, 0, 0, .25);
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+</style>
+
+<?php 
+
+$product = 'undefined';
+
+if ($_GET['product']) {
+
+	$product = getProduct($_GET['product']);
+
+}
+
+$product = getProduct($product);
+
+?>
+
+<nav class="navbar navbar-dark sticky-top bg-danger flex-md-nowrap p-0">
+	<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><?= $product['name']; ?></a>
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+			<div class="sidebar-sticky">
+
+				<ul class="nav flex-column">
+					<?php foreach ($product['sections'] as $key => $section) : ?>
+						<li class="nav-item">
+							<a class="nav-link" href="#<?= $key?>">
+								<span data-feather="<?= $section['icon']; ?>"></span>
+								<?= $section['name']; ?> <span class="sr-only">(current)</span>
+							</a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+
 			</div>
+		</nav>
 
-			<div class="border-bottom">
-				<div class="p-3" id="headingOne">
-					<h5 class=" mb-0">
-						<a class="text-dark" href="#">
-							<span class="font-weight-bold">Seção #2</span>
-						</a>
-					</h5>
+		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+			<?php foreach ($product['sections'] as $key => $section) : ?>
+				<div id="<?= $key; ?>" class="mb-5">
+				
+					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+						<h1 class="h2 font-weight-bold"><?= $section['name']; ?></h1>
+					</div>
+
+					<?php foreach ($section['contents'] as $key => $content) : ?>
+
+						<<?= $content['tag']; ?>><?= $content['value']; ?></<?= $content['tag']; ?>>
+
+					<?php endforeach; ?>
+
 				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="w-100">
-		
-		<div id="success" class="h-100-vh py-5 px-3 bg-success"></div>
-		<div id="primary" class="h-100-vh py-5 px-3 bg-primary"></div>
-		<div id="danger" class="h-100-vh py-5 px-3 bg-danger"></div>
-		<div id="warning" class="h-100-vh py-5 px-3 bg-warning"></div>
-
+			<?php endforeach; ?>
+		</main>
 	</div>
 </div>
+
+
 <?php require ('footer.php'); ?>

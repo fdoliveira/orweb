@@ -11,8 +11,8 @@
 	<title>LPS</title>
 
 	<?php $css = get_sheets('css'); ?>
-	<?php foreach ($css as $value) : ?>
-		<link rel="stylesheet" href="<?= $value; ?>">
+	<?php foreach ($css as $sheet) : ?>
+		<link rel="stylesheet" href="<?= $sheet; ?>">
 	<?php endforeach; ?>
 	
 </head>

@@ -62,17 +62,18 @@
 		<div class="row">
 			<?php $products = getProducts(); ?>
 			<?php foreach ($products as $key => $product) : ?>
-				<div class="col-md-8 my-3">
+				<div class="col-md-12 my-3">
 					<div class="bg-danger border rounded">
 						<div class="d-md-flex justify-content-start align-items-center">
 							<div class="text-center py-3 py-md-0 px-md-4 px-lg-5">
-								<i class="display-2 text-white icon ion-md-<?= $product['icon']; ?>"></i>
+								<i class="text-white" width="60" height="60" data-feather="<?= $product['icon']?>"></i>
 							</div>
 							<div class="card-body text-center text-md-left bg-white">
-								<h3 class="card-title"><?= $product['name']; ?></h3>
+								<h3 class="card-title font-weight-bold text-dark"><?= $product['name']; ?></h3>
 								<p class="card-text"><?= $product['description']; ?></p>
-								<a href="<?= $product['page_link']; ?>" class="btn btn-danger">Ver Produto</a>
-								<a href="#<?= $product['id']; ?>" class="btn btn-secondary">Ver Modelo</a>
+								<!-- product.php?product=$key -->
+								<a href="#" class="btn btn-danger">Ver Produto</a>
+								<a href="#<?= $key; ?>" class="btn btn-secondary">Ver Modelo</a>
 							</div>
 						</div>
 					</div>
@@ -92,8 +93,9 @@
 		<?php $models = getProducts(); ?>
 		<?php foreach ($models as $key => $model) : ?>
 
-			<h4	id="<?= $model['id']; ?>" class="text-light mt-5"><u><?= $model['name']; ?></u></h4>
+			<h4	id="<?= $key; ?>" class="text-light mt-5"><u><?= $model['name']; ?></u></h4>
 			<div class="row mb-3">
+
 				<?php foreach ($model['pdfs'] as $key => $pdf) : ?>
 					<div class="col-6 col-md-2">
 						<a target="_blank" href="<?= $pdf['link']; ?>">
@@ -105,6 +107,7 @@
 						<h4 class="h6 text-white mt-2">Caso de Uso - <?= $pdf['user']; ?> - <?= $pdf['plataform']; ?></h4>
 					</div>
 				<?php endforeach; ?>
+
 			</div>
 		<?php endforeach; ?>
 
