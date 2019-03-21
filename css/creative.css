@@ -237,6 +237,9 @@ header {
 .header-oromie {
     background-image: url(../img/or-omie/header/header-oromie.jpg);
 }
+.header-ormenu {
+    background-image: url(../img/or-menu/header/header-ormenu.jpg);
+}
 header .header-content {
     position: relative;
     width: 100%;
