@@ -1,15 +1,79 @@
 <?php require_once ("header.php"); ?>
 
-<header class="h-100-vh bg-info">
-	<div class="container">
-		<div class="min-h-100-vh d-flex align-items-center justify-content-center">
+<style type="text/css">
+	.header-top {
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-image: url('assets/img/header-ormenu.jpg');
+	}
+	.header-top .title {
+		font-size: 1.7em;
+	}
+	.header-top .subtitle {
+		font-size: 1em;
+	}
+	.header-top .form-get-email .input-email {
+		text-align: center;
+		border-top-right-radius: 6px;
+		border-top-left-radius: 6px;
+	}
+	.header-top .form-get-email .input-submit {
+		border-bottom-right-radius: 6px;
+		border-bottom-left-radius: 6px;
+	}
+	.header-top .form-get-email .input-email,
+	.header-top .form-get-email .input-submit {
+		width: 100%;
+	}
+	@media (min-width: 768px) {
+		.header-top .form-get-email .input-email {
+			text-align: left;
+			border-top-right-radius: 0;
+			border-top-left-radius: 6px;
+			border-bottom-left-radius: 6px;
+		}
+		.header-top .form-get-email .input-submit {
+			border-top-right-radius: 6px;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 6px;
+		}
+		.header-top .form-get-email .input-email {
+			width: 65%;
+		}
+		.header-top .form-get-email .input-submit {
+			width: 35%;
+		}
+	}
+	@media (min-width: 992px) {
+		.header-top {
+			background-size: 100% auto;
+		}
+		.header-top .title {
+			font-size: 2.4em;
+		}
+		.header-top .subtitle {
+			font-size: 1.2em;
+		}
+	}
+</style>
 
-			<div class="text-center text-white">
-				<h1 class="font-weight-bold text-uppercase display-4">orMENU</h1>
-				<h2 class="h4 font-weight-light">Sistema para Controle de Comandas e Mesas</h2>
-				<a class="btn btn-lg btn-light mt-4" href="">Benefícios</a>
-			</div>			
+<header class="header-top py-5">
+	<div class="container py-md-3 py-lg-5 my-3">
+		<div class="row align-items-center">
+			<div class="col-md-10 col-lg-7">
+				<div class="text-white text-center text-md-left">
 
+					<h1 class="title">Controle seu restaurante, lanchonete ou bar sem complicação</h1>
+					<h2 class="subtitle font-weight-light">Sistema para Controle de Comandas e Mesas. Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Começe agora:</h2>
+
+					<form class="form-get-email d-md-flex align-items-center mt-4 mt-lg-5" method="post">
+						<input class="input-email border-0 p-3" type="email" name="email" placeholder="Informe seu e-mail" size="34">
+						<button class="input-submit bg-success text-white border-0 p-3" type="submit">Experimente Grátis!</button>
+					</form>
+		
+				</div>	
+			</div>
 		</div>
 	</div>
 </header>
