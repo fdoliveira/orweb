@@ -133,7 +133,7 @@
 <nav hidden>
     <div class="content-header d-flex justify-content-center align-items-center">
         <span class="font-weight-light mr-md-3">
-        	Fale Conosco <span class="phone-number">84 9 98152-0971</span>
+        	Fale Conosco <span class="phone-number">84 9 8152-0971</span>
         </span>
         <a href="#" class="btn btn-success d-none d-md-inline-block">Experimente Grátis</a>
         <a href="#" class="btn btn-link d-none d-md-inline-block">Entrar</a>
